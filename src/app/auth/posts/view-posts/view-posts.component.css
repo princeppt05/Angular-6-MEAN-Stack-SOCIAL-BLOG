@@ -1,0 +1,11 @@
+.list-group{
+    margin:10px;
+    padding: 10px;
+}
+
+.list-group-item {
+    margin:10px;
+    padding: 10px;
+   color:black;
+}
+

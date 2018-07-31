@@ -1,0 +1,5 @@
+"Reactive Forms " - for Registeration;
+"Reactive Forms " - for Login;
+
+Implemented : JWT token with Secret Key - "prince"
+

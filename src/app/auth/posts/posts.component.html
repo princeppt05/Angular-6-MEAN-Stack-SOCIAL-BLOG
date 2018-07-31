@@ -1,0 +1,60 @@
+
+<div id="regMainDiv" class="container animated rotateInUpLeft">
+    <div class="row">
+      <div id="regLDiv" class="col-sm-8">
+        <h1 class="display-1 animated rotateInUpLeft">Social</h1>
+      </div>
+
+
+
+
+    <div id="regRDiv" class="col-sm-4">
+
+      <form [formGroup]="postForm">
+
+        
+        <!-- <div class="form-group">
+          <label class="control-label">PostID</label>
+          <label placeholder="UserId" class="form-control" formControlName="uid"></textarea> 
+          <input type="text" class="form-control" placeholder="Description" formControlName="post_des" />
+          <div *ngIf="!postForm.get('post_des').valid && (postForm.get('post_des').touched)">
+            <div class="alert alert-danger" *ngIf="postForm.get('post_des').errors.required">Please enter post_des</div>
+            <div class="alert alert-danger" *ngIf="postForm.get('post_des').errors.minlength">post_des should be minimum 5 characters long</div>
+          </div>
+
+        </div> -->
+
+        <div class="form-group">
+          <label class="control-label animated rollIn">Post Title</label>
+          <input type="text" class="form-control animated rollIn" placeholder="Post Title" formControlName="post_title" />
+          <div *ngIf="!postForm.get('post_title').valid && (postForm.get('post_title').touched)">
+            <div class="alert alert-danger" *ngIf="postForm.get('post_title').errors.required">Please enter Post title</div>
+            <div class="alert alert-danger" *ngIf="postForm.get('post_title').errors.minlength">Title should be minimum 5 characters long</div>
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+          <label class="control-label animated rollIn">Post Description</label>
+          <textarea placeholder="Your Post!" class="form-control animated rollIn" formControlName="post_des"></textarea> 
+          <!-- <input type="text" class="form-control" placeholder="Description" formControlName="post_des" /> -->
+          <div *ngIf="!postForm.get('post_des').valid && (postForm.get('post_des').touched)">
+            <div class="alert alert-danger" *ngIf="postForm.get('post_des').errors.required">Please enter post_des</div>
+            <div class="alert alert-danger" *ngIf="postForm.get('post_des').errors.minlength">post_des should be minimum 5 characters long</div>
+          </div>
+
+        </div>
+
+        <button class="btn btn-primary animated jackInTheBox" [disabled]="!postForm.valid" (click)="post_create()">Create Post</button>
+      </form>
+    </div>
+</div>
+</div>
+
+       
+
+       
+
+
+       

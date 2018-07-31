@@ -1,0 +1,66 @@
+<div id="regMainDiv" class="container animated rotateInUpLeft">
+  <div class="row">
+    <div id="regLDiv" class="col-sm-8">
+      <h1 class="display-1 animated rotateInUpLeft">Social</h1>
+    </div>
+
+    <div id="regRDiv" class="col-sm-4">
+
+      <form [formGroup]="userForm">
+
+        <div class="form-group">
+          <label class="control-label animated rollIn">Username</label>
+          <input type="text" class="form-control animated rollIn" placeholder="Username" formControlName="username" />
+          <div *ngIf="!userForm.get('username').valid && (userForm.get('username').touched)">
+            <div class="alert alert-danger" *ngIf="userForm.get('username').errors.required">Please enter User Name</div>
+            <div class="alert alert-danger" *ngIf="userForm.get('username').errors.minlength">username should be minimum 5 characters long</div>
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+          <label class="control-label animated rollIn">First Name</label>
+          <input type="text" class="form-control animated rollIn" placeholder="Firstname" formControlName="firstname" />
+          <div *ngIf="!userForm.get('firstname').valid && (userForm.get('firstname').touched)">
+            <div class="alert alert-danger" *ngIf="userForm.get('firstname').errors.required">Please enter First Name</div>
+            <div class="alert alert-danger" *ngIf="userForm.get('firstname').errors.minlength">Firstname should be minimum 5 characters long</div>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label class="control-label animated rollIn">Last Name</label>
+          <input type="text" class="form-control animated rollIn" placeholder="LastName" formControlName="lastname" />
+          <div *ngIf="!userForm.get('lastname').valid && (userForm.get('lastname').touched)">
+            <div class="alert alert-danger" *ngIf="userForm.get('lastname').errors.required">Please enter Last Name</div>
+          </div>
+
+        </div>
+
+        <div class="form-group animated rollIn">
+          <label class="control-label animated rollIn">Email</label>
+          <input type="text" class="form-control" placeholder="Email" formControlName="email" />
+          <div *ngIf="!userForm.get('email').valid && (userForm.get('email').touched)">
+            <div class="alert alert-danger" *ngIf="userForm.get('email').errors.required">Please enter Email</div>
+            <div class="alert alert-danger" *ngIf="userForm.get('email').errors.pattern">Invalid Email</div>
+          </div>
+
+        </div>
+
+        <div class="form-group animated rollIn">
+          <label class="control-label animated rollIn">Password</label>
+          <input type="text" class="form-control" placeholder="Password" formControlName="password" />
+          <div *ngIf="!userForm.get('password').valid && (userForm.get('password').touched)">
+            <div class="alert alert-danger" *ngIf="userForm.get('password').errors.required">Please enter Password</div>
+            <div class="alert alert-danger" *ngIf="userForm.get('password').errors.minlength">Password should be minimum 5 characters long</div>
+          </div>
+
+        </div>
+
+
+        <button class="btn btn-primary animated jackInTheBox" [disabled]="!userForm.valid" (click)="submit()">Create Account</button>
+      </form>
+    </div>
+  </div>
+</div>
